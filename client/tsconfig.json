@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM"],
+    "moduleResolution": "Node",
+    "jsx": "preserve",
+    "strict": true,
+    "noImplicitAny": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["*"],
+      "@app/*": ["1-app/*"],
+      "@pages/*": ["2-pages/*"],
+      "@widgets/*": ["3-widgets/*"],
+      "@features/*": ["4-features/*"],
+      "@shared/*": ["5-shared/*"],
+      "@images/*": ["images/*"],
+      "@root/*": ["../*"]
+    }
+  },
+  "include": ["."],
+  "exclude": ["node_modules", "build", "dist"]
+}

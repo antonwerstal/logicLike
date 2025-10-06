@@ -1,0 +1,62 @@
+{
+  "name": "logiclike",
+  "version": "1.0.0",
+  "description": "React + TypeScript + Express проект с Webpack",
+  "main": "server/dist/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm start\"",
+    "server": "nodemon --exec ts-node -r dotenv/config -r tsconfig-paths/register --project server/tsconfig.json server/src/index.ts",
+    "start": "webpack serve --mode development",
+    "reset-db": "ts-node -r dotenv/config -r tsconfig-paths/register --project server/tsconfig.json server/src/db/resetDB.ts",
+    "type-check": "tsc --noEmit --project client/tsconfig.json",
+    "type-check:server": "tsc --noEmit --project server/tsconfig.json"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "express",
+    "webpack",
+    "scss"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react-router-dom": "^5.3.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.18.2",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "pg-promise": "^12.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^7.9.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.10.5",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "babel-loader": "^10.0.0",
+    "concurrently": "^8.2.2",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.6.0",
+    "nodemon": "^3.0.2",
+    "sass": "^1.69.5",
+    "sass-loader": "^14.0.0",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

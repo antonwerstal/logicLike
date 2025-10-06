@@ -1,0 +1,13 @@
+.MenuItem{
+  background: #ecf1f4;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 5px;
+  transition: all .3s;
+  display: block;
+
+  &.active, &:hover{
+    color: #FFF;
+    background: #0078d2;
+  }
+}
